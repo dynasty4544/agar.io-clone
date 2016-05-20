@@ -1,11 +1,8 @@
-//package.json
-"main": "app.js"
-
 {
   "name": "agar-clone",
   "version": "1.0.0",
   "description": "A simple Agar.io clone",
-  "main": "server/server.js",
+  "main": "app.js",
   "scripts": {
     "build": "gulp build",
     "start": "gulp run",
