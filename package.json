@@ -1,3 +1,8 @@
+"scripts": {
+"start": "node server.js"
+},
+"main": "server.js"
+
 {
   "name": "agar-clone",
   "version": "1.0.0",
@@ -11,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/huytd/agar.io-clone.git"
+    "url": "https://github.com/dynasty4544/agar.io-clone.git"
   },
   "author": "Huy Tran",
   "license": "MIT",
