@@ -716,15 +716,10 @@ setInterval(gameloop, 1000);
 setInterval(sendUpdates, 1000 / c.networkUpdateFactor);
 
 // Don't touch, IP configurations.
-var ipaddress = process.env.OPENSHIFT_NODEJS_IP || process.env.IP || '127.0.0.1';
--    var port = process.env.PORT || 8080;
-+    var port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
-if (process.env.OPENSHIFT_NODEJS_IP !== undefined) {
-    http.listen( serverport, ipaddress, function() {
-        console.log('[DEBUG] Listening on *:' + serverport);
-    });
-} else {
-    http.listen( serverport, function() {
-        console.log('[DEBUG] Listening on *:' + c.port);
-    });
-}
+var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
+var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+ 
+server.listen(server_port, server_ip_address, function () {
+  console.log( "Listening on " + server_ip_address + ", server_port " + port )
+});
+
